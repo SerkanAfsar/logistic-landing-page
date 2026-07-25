@@ -1,0 +1,54 @@
+@use "../abstact/mixins" as *;
+@use "../abstact/variables" as *;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  @include respond-up(md) {
+    text-align: left;
+  }
+}
+h1 {
+  font-size: var(--h1-font-size);
+  font-family: $font-lato;
+  line-height: 130%;
+  font-weight: 800;
+}
+h2 {
+  font-size: var(--h2-font-size);
+  font-weight: 700;
+  line-height: 49.144px;
+
+  @include respond-up(md) {
+    text-align: center;
+  }
+}
+h3 {
+  font-size: var(--h3-font-size);
+}
+p {
+  font-size: var(--p-font-size);
+  line-height: 185%;
+  @include respond-up(lg) {
+    line-height: 200%;
+  }
+}
+
+h5 {
+  font-size: var(--h5-font-size);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%; /* 49.144px */
+}
+h6 {
+  font-size: var(--h6-font-size);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22.682px; /* 150% */
+}

@@ -1,0 +1,36 @@
+$theme-colors: (
+  "primary-color": #035e89,
+  "dark-text-color": #1b191a,
+  "gray-text-color": #767576,
+  "linear": linear-gradient(101deg, #0179b4 21%, #88d8ff 93.51%),
+  "light-bg-color": #f2faff,
+);
+
+$box-shadows: (
+  "header-box-shadow": 0 3.78px 9.167px 0 rgba(131, 131, 131, 0.05),
+);
+
+$transitions: (
+  "default": all 0.4s ease-in-out,
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  3xl: 2560px,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+);
+
+$font-lato: "Lato", sans-serif;
+$font-inter: "Inter", sans-serif;

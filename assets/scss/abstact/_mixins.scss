@@ -1,0 +1,46 @@
+@use "./variables" as *;
+@use "sass:map";
+
+@mixin flexBox(
+  $flexDirection: row,
+  $justifyContent: center,
+  $alignItems: center
+) {
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+  flex-direction: $flexDirection;
+}
+
+@mixin respond-up($breakPoint) {
+  @media all and (min-width: map.get($grid-breakpoints, $breakPoint)) {
+    @content;
+  }
+}
+
+@mixin respond-down($breakPoint) {
+  $value: map.get($grid-breakpoints, $breakPoint)-0.02px;
+  @media all and (max-width: $value) {
+    @content;
+  }
+}
+
+@mixin transformXMixin($breakPoint) {
+  @if $breakPoint== "3xl" {
+    @include respond-up((3xl)) {
+      transform: translateX(40px);
+    }
+  } @else {
+    @include respond-up($breakPoint) {
+      $val: map.get($container-max-widths, $breakPoint);
+      transform: translateX(calc((100vw - #{$val}) / 2));
+    }
+  }
+}
+
+@mixin lineClamp($line: 2) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+  overflow: hidden;
+}

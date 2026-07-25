@@ -1,0 +1,57 @@
+@use "../abstact/functions" as *;
+@use "../abstact/mixins" as *;
+
+.operations {
+  overflow-x: hidden;
+  &-container {
+    border-radius: 13.231px;
+    padding: 35px;
+    @include respond-up(md) {
+      padding: 35px 60px;
+      background: get-color(light-bg-color);
+    }
+  }
+  &-info {
+    @include respond-up(lg) {
+      padding-right: 100px;
+    }
+    @include respond-up(xl) {
+      padding-right: 200px;
+    }
+  }
+  &-img {
+    margin-top: 70px;
+    transform: translateX(60px);
+    img {
+      scale: 1.4;
+    }
+    @include respond-up(md) {
+      margin-top: 40px;
+      transform: translateX(20px);
+      img {
+        scale: 1.3;
+      }
+    }
+    @include respond-up(lg) {
+      transform: translateX(20px);
+      img {
+        scale: 1.1;
+      }
+    }
+    @include respond-up(xl) {
+      margin-top: 0px;
+    }
+  }
+  h5 {
+    color: get-color();
+    text-align: left;
+    font-weight: 600;
+  }
+  p {
+    margin-top: 15px;
+    text-align: left;
+  }
+  .btn {
+    margin-top: 20px;
+  }
+}

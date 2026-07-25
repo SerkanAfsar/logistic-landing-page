@@ -1,0 +1,29 @@
+@use "../abstact/functions" as *;
+@use "../abstact/mixins" as *;
+
+$color: get-color();
+.btn {
+  @include flexBox;
+  display: inline-flex;
+  padding: 13.231px 32.133px;
+  gap: 9.451px;
+  background: $color;
+  color: #fff;
+  transition: get-transitions();
+  border: 1px solid $color;
+  &:hover {
+    border: 1px solid $color;
+    color: $color;
+    background: #fff;
+  }
+  &-outlined {
+    background: #fff;
+    border: 1px solid $color;
+    color: $color;
+    &:hover {
+      background: $color;
+      border: 1px solid $color;
+      color: #fff;
+    }
+  }
+}

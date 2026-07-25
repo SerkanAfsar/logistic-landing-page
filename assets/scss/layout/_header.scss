@@ -1,0 +1,100 @@
+@use "../abstact/functions" as *;
+@use "../abstact/mixins" as *;
+@use "../abstact/variables" as *;
+.header {
+  display: block;
+  width: 100%;
+  background: #fff;
+  font-family: $font-inter;
+  box-shadow: get-box-shadow();
+  position: relative;
+  height: var(--header-height);
+  z-index: 20;
+  i {
+    &::before {
+      font-size: 30px;
+    }
+  }
+  &.sticky {
+    animation: fade-in 0.4s ease-in-out;
+    position: sticky;
+    inset: 0px;
+  }
+  nav {
+    width: 100%;
+    ul {
+      @include flexBox();
+      width: 100%;
+
+      li {
+        margin-right: 20px;
+        @include respond-up(xl) {
+          margin-right: 40px;
+        }
+        display: block;
+
+        &:first-child {
+          margin-left: auto;
+        }
+        &:last-child {
+          margin-right: 0px;
+          margin-left: -10px;
+          @include respond-up(xl) {
+            margin-left: -30px;
+          }
+        }
+
+        &:not(:has(> a.btn)):has(+ li > a.btn) {
+          margin-right: auto;
+        }
+        a {
+          width: 100%;
+          display: block;
+        }
+      }
+    }
+    @include respond-down(lg) {
+      position: absolute;
+      top: 100%;
+      left: 0px;
+      visibility: hidden;
+      right: 0px;
+      opacity: 0;
+      transition: get-transitions();
+      background: #fff;
+      width: 100%;
+      transform: translateY(20px);
+      z-index: 100;
+      &.opened {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0%);
+      }
+      ul {
+        flex-direction: column;
+        li {
+          margin: 0px;
+          display: block;
+          width: 100%;
+          border-bottom: 1px solid #ddd;
+          &:first-child {
+            margin-left: 0px;
+            border-top: 1px solid #ddd;
+          }
+          &:has(> a.btn) {
+            padding: 10px;
+          }
+          &:not(:has(> a.btn)):has(+ li > a.btn) {
+            margin-right: 0px;
+          }
+          &:last-child {
+            margin: 0px;
+          }
+          a {
+            padding: 15px;
+          }
+        }
+      }
+    }
+  }
+}

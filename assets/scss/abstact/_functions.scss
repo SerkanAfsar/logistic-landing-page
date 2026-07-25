@@ -1,0 +1,39 @@
+@use "sass:map";
+@use "variables" as *;
+
+@function get-color($color: "primary-color") {
+  @return map.get($theme-colors, $color);
+}
+
+@function get-box-shadow($item: "header-box-shadow") {
+  @return map.get($box-shadows, $item);
+}
+
+@function get-transitions($item: "default") {
+  @return map.get($transitions, $item);
+}
+
+@function get-fonts($item: "inter") {
+  @return map.get($transitions, $item);
+}
+@function get-container($breakPoint: "lg") {
+  @return map.get($container-max-widths, $breakPoint);
+}
+
+@function transform-value($breakPoint, $operator: "plus") {
+  @debug $breakPoint;
+  @if $breakPoint== "3xl" {
+    @if $operator== "plus" {
+      @return 40px;
+    } @else {
+      @return -40px;
+    }
+  } @else {
+    $val: map.get($container-max-widths, $breakPoint);
+    @if ($operator== "plus") {
+      @return calc((100vw - #{$val}) / 2);
+    } @else {
+      @return calc(-1 * ((100vw - #{$val}) / 2));
+    }
+  }
+}

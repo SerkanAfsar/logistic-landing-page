@@ -1,0 +1,38 @@
+@use "../abstact/functions" as *;
+@use "../abstact/mixins" as *;
+.services {
+  h2 {
+    text-transform: capitalize;
+    span {
+      background: var(
+        --Linear,
+        linear-gradient(104deg, #0179b4 7.76%, #88d8ff 90.48%)
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  p {
+    text-align: center;
+    max-width: 840px;
+    margin-left: auto;
+    margin-right: auto;
+    color: get-color(gray-text-color);
+  }
+  &-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+
+    gap: 25px;
+    @include respond-up(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include respond-up(lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include respond-up(xl) {
+      gap: 55px;
+    }
+  }
+}

@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header d-flex align-items-center">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-auto col-lg-2">
+            <a href="#">
+              <img src="assets/images/logo01.png" alt="logo" />
+            </a>
+          </div>
+          <div class="col-auto col-lg-10">
+            <nav>
+              <ul>
+                <li>
+                  <a href="#"> Home </a>
+                </li>
+                <li>
+                  <a href="#"> Services </a>
+                </li>
+                <li>
+                  <a href="#"> Pricing </a>
+                </li>
+                <li>
+                  <a href="#"> Track Shipment </a>
+                </li>
+                <li>
+                  <a href="#"> About Us </a>
+                </li>
+                <li>
+                  <a href="#" class="btn"> Log In </a>
+                </li>
+                <li>
+                  <a href="#" class="btn btn-outlined"> Sign Up </a>
+                </li>
+              </ul>
+            </nav>
+            <button
+              type="button"
+              class="d-block d-lg-none nav-toggle"
+              id="nav-toggle"
+            >
+              <i class="bi bi-list"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="row">
+            <div
+              class="col-12 z-3 col-md-7 col-lg-7 col-xl-7 d-flex flex-column justify-content-center align-items-center align-items-md-start align-items-lg-start"
+            >
+              <h1>Effortless Logistics, Every Step of the Way.</h1>
+              <p>
+                Manage your shipments, track in real-time, and get the best
+                rates—all from one platform.
+              </p>
+              <div class="d-inline-flex align-items-start gap-3">
+                <a href="#" class="btn"> Get a Free Quote </a>
+                <a href="#" class="btn btn-outlined"> Learn More </a>
+              </div>
+            </div>
+            <div class="hero-effect"></div>
+          </div>
+        </div>
+      </section>
+      <section class="services pt-100">
+        <div class="container">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-12 text-center">
+              <h2>Three main <span>services</span></h2>
+              <p class="mt-40">
+                Our app gives you unparalleled visibility into your entire
+                logistics network. Whether you’re managing a single delivery or
+                overseeing thousands, you can track the exact location of every
+                shipment in real time.
+              </p>
+            </div>
+            <div class="col-12">
+              <div class="services-container mt-60">
+                <article class="service-item">
+                  <img src="assets/images/service01.png" alt="" />
+                  <h4>Track Every Shipment in Real Time</h4>
+                  <p>
+                    Stay updated on your cargo’s exact location with instant
+                    tracking notifications
+                  </p>
+                </article>
+                <article class="service-item">
+                  <img src="assets/images/service02.png" alt="" />
+                  <h4>
+                    Automate Route <br />
+                    Optimization
+                  </h4>
+                  <p>
+                    Cut costs and time by letting our AI-driven system optimize
+                    delivery routes.
+                  </p>
+                </article>
+                <article class="service-item">
+                  <img src="assets/images/service03.png" alt="" />
+                  <h4>Detailed Analytics and Reporting</h4>
+                  <p>
+                    Make data-driven decisions with comprehensive logistics
+                    reports at your fingertips.
+                  </p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="van mt-100">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-7">
+            <h5>Your Fleet’s Safety, Our Top Priority</h5>
+            <p>
+              Regular safety checks and maintenance are part of our commitment
+              to keeping your fleet in top condition. Our app schedules and
+              tracks inspections, ensuring that every vehicle meets stringent
+              safety standards
+            </p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-5 position-relative">
+            <div class="van-img">
+              <img src="assets/images/van01.png" alt="" />
+            </div>
+          </div>
+          <div
+            class="col-12 d-flex flex-column flex-md-row justify-content-md-between align-items-md-center mt-3"
+          >
+            <img
+              src="assets/images/quote01.png"
+              class="van-quote order-1"
+              alt=""
+            />
+            <a href="#" class="btn order-0 order-md-2"> Get a Free Quote </a>
+          </div>
+        </div>
+      </section>
+      <section class="counter mt-100">
+        <div class="container">
+          <div class="counter-container">
+            <div class="counter-item">
+              <span><span class="odometer" data-count="10000"></span>+</span>
+              <h6>Deliveries Managed</h6>
+            </div>
+
+            <div class="counter-item">
+              <span><span class="odometer" data-count="2500"></span>+</span>
+              <h6>Active Clients</h6>
+            </div>
+
+            <div class="counter-item">
+              <span><span class="odometer" data-count="98"></span>%</span>
+              <h6>On-Time Delivery Rate</h6>
+            </div>
+
+            <div class="counter-item">
+              <span><span class="odometer" data-count="200"></span>+</span>
+              <h6>Industry</h6>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="operations mt-100">
+        <div class="container">
+          <div class="col-12 operations-container">
+            <div class="row">
+              <div class="col-md-7">
+                <div class="operations-info">
+                  <h5>Ready to Revolutionize Your Logistics Operations?</h5>
+                  <p>
+                    Join countless other businesses that have streamlined their
+                    logistics with our cutting-edge solutions
+                  </p>
+                  <a href="#" class="btn"> Get a Free Quote </a>
+                </div>
+              </div>
+              <div class="col-md-5 position-relative">
+                <div class="operations-img">
+                  <img src="assets/images/operation01.png" alt="" class="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer mt-100">
+      <div class="container">
+        <div class="footer-top pt-50 pb-40">
+          <div class="row">
+            <div class="col-12 col-md-3 mbs-40">
+              <div class="footer-desc">
+                <img src="assets/images/logo02.png" class="img-fluid" />
+                <p>We’re here to support you every step of the way</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 mbs-40">
+              <h6>Support</h6>
+              <ul>
+                <li>
+                  <a href="#">Getting Started </a>
+                </li>
+                <li>
+                  <a href="#">FAQS </a>
+                </li>
+                <li>
+                  <a href="#">Help Articles </a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-6 col-md-3 mbs-40">
+              <h6>Legal</h6>
+              <ul>
+                <li>
+                  <a href="#">Terms & Conditions</a>
+                </li>
+                <li>
+                  <a href="#">Privacy Policy</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-12 col-md-3 mbs-40">
+              <h6>Services</h6>
+              <ul>
+                <li>
+                  <a href="#">Shipment Tracking</a>
+                </li>
+                <li>
+                  <a href="#">Route Optimization</a>
+                </li>
+                <li>
+                  <a href="#">Inventory Management</a>
+                </li>
+                <li>
+                  <a href="#">Freight Management</a>
+                </li>
+                <li>
+                  <a href="#">Real-Time Analytics</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div
+            class="row justify-content-center justify-content-md-between text-center align-items-center"
+          >
+            <div class="col-auto">
+              <ul class="d-flex gap-3">
+                <li>
+                  <a href="#">
+                    <img src="assets/images/facebook.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="assets/images/youtube.png" alt="" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-auto">
+              <span>
+                Swiftlogix 2024 © All Rights Reserved-Powered By Serkan Afşar
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"
+  ></script>
+  <script type="text/javascript" src="assets/scripts/odometer.js"></script>
+  <script type="text/javascript" src="assets/scripts/script.js"></script>
+</html>

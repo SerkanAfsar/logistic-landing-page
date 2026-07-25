@@ -1,0 +1,37 @@
+@use "../abstact/functions" as *;
+@use "../abstact/mixins" as *;
+.service-item {
+  @include flexBox(column, flex-start, flex-start);
+  gap: 10px;
+  padding: 35px 25px;
+  border-radius: 22.682px;
+  border: 1.89px solid get-color();
+  height: 100%;
+
+  box-shadow: 2.95px 8.851px 20.653px 0 rgba(0, 0, 0, 0.06);
+  h4 {
+    color: get-color();
+    font-weight: 700;
+    line-height: 140%;
+    max-width: 250px;
+    margin-top: 10px;
+
+    font-size: 18.901px;
+    font-style: normal;
+    font-weight: 700;
+    text-align: left;
+  }
+  p {
+    color: get-color(color-text-gray);
+    font-weight: 600;
+    line-height: 22.682px;
+    text-align: left !important;
+    font-size: 13.231px;
+    line-height: 22.682px; /* 171.429% */
+    display: block;
+
+    max-width: 260px !important;
+
+    margin-left: 0px !important;
+  }
+}
