@@ -1,9 +1,7 @@
-console.log("hello world");
-const headerNav = document.querySelector(".header nav");
-const toggleBtn = document.getElementById("nav-toggle");
-const header = document.querySelector(".header");
-
-const counter = document.querySelector(".counter");
+const headerNav = document.querySelector(".header nav"),
+  toggleBtn = document.getElementById("nav-toggle"),
+  header = document.querySelector(".header"),
+  counter = document.querySelector(".counter");
 
 window.addEventListener("scroll", () => {
   header.classList.toggle("sticky", window.scrollY >= header.clientHeight);
@@ -14,8 +12,6 @@ toggleBtn.addEventListener("click", (e) => {
   e.preventDefault();
   headerNav.classList.toggle("opened");
 });
-
-const odometers = document.querySelectorAll(".odometer");
 
 function setItem(item) {
   const target = item.getAttribute("data-count");
